@@ -1,0 +1,16 @@
+E:\C#\lab5\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.exe.config
+E:\C#\lab5\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.exe
+E:\C#\lab5\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.pdb
+E:\C#\lab5\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csprojAssemblyReference.cache
+E:\C#\lab5\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.Properties.Resources.resources
+E:\C#\lab5\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.GenerateResource.cache
+E:\C#\lab5\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.exe
+E:\C#\lab5\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.pdb
+C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.exe.config
+C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.exe
+C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.pdb
+C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csprojAssemblyReference.cache
+C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.Properties.Resources.resources
+C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.GenerateResource.cache
+C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.exe
+C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.pdb
