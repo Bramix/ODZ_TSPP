@@ -1,12 +1,92 @@
-﻿using System.Windows.Forms;
+﻿﻿using System;
+ using System.Collections.Generic;
+ using System.Windows.Forms;
+ using ODZ_TSPP.Entity;
+ using ODZ_TSPP.Implementation;
+ using ODZ_TSPP.Interface;
 
-namespace ODZ_TSPP
+ namespace ODZ_TSPP
 {
     public partial class MainForm : Form
     {
+        private IApplicantRepository _applicantRepository = new ApplicantRepository();
         public MainForm()
         {
             InitializeComponent();
         }
+
+       private void create_user(object sender, EventArgs e)
+        {
+            new EditUserForm().ShowDialog();
+            ReloadData();
+        }
+
+        void ReloadData()
+        {
+            if(txtSearch.Text.Trim().Length > 0)
+            {
+                PopulateData(new List<Applicant>());
+            }
+            else
+            {
+                PopulateData(_applicantRepository.GetAllApplicants());
+            }
+        }
+
+        void PopulateData(IEnumerable<Applicant> applicants)
+        {
+            table.Rows.Clear();
+            foreach (var applicant in applicants)
+            {
+                table.Rows.Add(new object[]{
+                    applicant.Id,
+                    applicant.FirstName,
+                    applicant.SecondName,
+                    applicant.Marks,
+                    applicant.NumberOfSchool,
+                    "Edit",
+                    "Delete"
+                });
+                table.Rows[table.RowCount - 1].Tag = applicant;
+            }
+        }
+
+        private void frmContactList_Shown(object sender, EventArgs e)
+        {
+            ReloadData();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            ReloadData();
+        }
+        
+       private void table_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 5) //edit
+            {
+                new EditUserForm((Applicant) table.CurrentRow.Tag).ShowDialog();
+                ReloadData();
+            }
+            if (e.ColumnIndex == 6) //delete
+            {
+                Applicant applicant = (Applicant) table.CurrentRow.Tag;
+                if (MessageBox.Show("Delete " + applicant.FirstName +"?","CONFIRM", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
+                {
+                    _applicantRepository.RemoveApplicantById(applicant.Id);
+                    ReloadData();
+                }
+            }
+        }
+
+       private void pnlHeader_Paint(object sender, PaintEventArgs e)
+       {
+           throw new System.NotImplementedException();
+       }
+
+       private void button2_Click(object sender, EventArgs e)
+       {
+           throw new System.NotImplementedException();
+       }
     }
 }
