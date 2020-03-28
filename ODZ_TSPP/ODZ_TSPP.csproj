@@ -123,5 +123,8 @@
   <ItemGroup>
     <Folder Include="Service" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Start.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

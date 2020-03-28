@@ -15,7 +15,7 @@ namespace ODZ_TSPP
         public EditUserForm()
         {
             InitializeComponent();
-            lblTitle.Text = "Add Contact";
+            lblTitle.Text = "Add the user";
         }
 
         public EditUserForm(Applicant applicant)
@@ -23,7 +23,7 @@ namespace ODZ_TSPP
             InitializeComponent();
             btn1.Text = "Update";
             this.applicant = applicant;
-            lblTitle.Text = "Update Contact";
+            lblTitle.Text = "Update the user";
             //Validation
             //this.applicant.onValidationError += Contact_onValidationError;
 
@@ -57,7 +57,7 @@ namespace ODZ_TSPP
                 
                 if (_applicantRepository.addApplicant(applicant) > 0)
                 {
-                    MessageBox.Show("Contact Saved");
+                    MessageBox.Show("User has been saved");
                 }
             }
             else
@@ -66,10 +66,14 @@ namespace ODZ_TSPP
                 applicant.SecondName = txtLastName.Text;
                 applicant.Marks = Double.Parse(txtMarks.Text);
                 applicant.NumberOfSchool = int.Parse(txtNumberOfSchool.Text);
-                if (_applicantRepository.EditApplicant(applicant) > 0) MessageBox.Show("Contact Updated");
+                if (_applicantRepository.EditApplicant(applicant) > 0) MessageBox.Show("User has been udated");
             }
             this.Close();
         }
-        
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

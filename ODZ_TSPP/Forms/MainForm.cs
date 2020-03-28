@@ -71,7 +71,7 @@
             if (e.ColumnIndex == 6) //delete
             {
                 Applicant applicant = (Applicant) table.CurrentRow.Tag;
-                if (MessageBox.Show("Delete " + applicant.FirstName +"?","CONFIRM", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
+                if (MessageBox.Show("Do you wont to delete " + applicant.FirstName +"?","CONFIRM", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
                 {
                     _applicantRepository.RemoveApplicantById(applicant.Id);
                     ReloadData();
