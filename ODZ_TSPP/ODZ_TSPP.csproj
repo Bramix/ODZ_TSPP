@@ -73,7 +73,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Applicant.cs" />
+    <Compile Include="Entity\Addres.cs" />
+    <Compile Include="Entity\User.cs" />
     <Compile Include="Forms\EditUserForm.cs">
       <SubType>Form</SubType>
     </Compile>

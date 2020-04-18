@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using ODZ_TSPP.Entity;
-using ODZ_TSPP.Interface;
+using ODZ_TSPP.Service.Interface;
 
 namespace ODZ_TSPP.Implementation
 {
     public class ApplicantRepository:IApplicantRepository
     {
-        public List<Applicant> GetAllApplicants()
+        public List<User> GetAllApplicants()
         {
-            List <Applicant> applicants = new List<Applicant>();
-            using (MySqlConnection conn = new MySqlConnection(Configs.connectionString)) 
+            List <User> applicants = new List<User>();
+            using (MySqlConnection conn = new MySqlConnection(Configs.ConnectionString)) 
             using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM users", conn)) {
                     conn.Open();
                     using (var reader = cmd.ExecuteReader())   
@@ -23,9 +23,9 @@ namespace ODZ_TSPP.Implementation
             return applicants;
         }
 
-        public Applicant GetApplicantById(int id)
+        public User GetApplicantById(int id)
         {
-            using (MySqlConnection conn = new MySqlConnection(Configs.connectionString))
+            using (MySqlConnection conn = new MySqlConnection(Configs.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM users where id = @id", conn))
             {
                 conn.Open();
@@ -40,32 +40,32 @@ namespace ODZ_TSPP.Implementation
             }
         }
 
-        public int addApplicant(Applicant applicant)
+        public int addApplicant(User user)
         {
-            using (MySqlConnection conn = new MySqlConnection(Configs.connectionString))
-            using (MySqlCommand cmd = new MySqlCommand("INSERT INTO users (`FirstName`, `SecondName`, `Mark`, `NumberOfSchool`) VALUE (@FirstName, @SecondName, @Mark, @NumberOfSchool);", conn))
+            using (MySqlConnection conn = new MySqlConnection(Configs.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand("INSERT INTO users (`SecondName`,`YearOfConnection`, `PhoneNumber`) VALUE (@SecondName, @YearOfConnection, @PhoneNumber);", conn))
             {
                 conn.Open();
-                ProvideAllParameters(cmd, applicant);
+                ProvideAllParameters(cmd, user);
                 return cmd.ExecuteNonQuery();
             }
         }
 
-        public int EditApplicant(Applicant applicant)
+        public int EditApplicant(User user)
         {
-            using (MySqlConnection conn = new MySqlConnection(Configs.connectionString))
-            using (MySqlCommand cmd = new MySqlCommand("Update users SET FirstName = @FirstName, SecondName = @SecondName, Mark = @Mark, NumberOfSchool = @NumberOfSchool where id = @id;", conn))
+            using (MySqlConnection conn = new MySqlConnection(Configs.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand("Update users SET SecondName = @SecondName, YearOfConnection = @YearOfConnection,PhoneNumber = @PhoneNumber where id = @id;", conn))
             {
                 conn.Open();
-                ProvideAllParameters(cmd, applicant);
-                cmd.Parameters.AddWithValue("@id", applicant.Id);
+                ProvideAllParameters(cmd, user);
+                cmd.Parameters.AddWithValue("@id", user.Id);
                 return cmd.ExecuteNonQuery();
             }
         }
 
         public void RemoveApplicantById(int id)
         {
-            using (MySqlConnection conn = new MySqlConnection(Configs.connectionString))
+            using (MySqlConnection conn = new MySqlConnection(Configs.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand("DELETE FROM users where id = @id", conn))
             {
                 conn.Open();
@@ -74,21 +74,21 @@ namespace ODZ_TSPP.Implementation
             }
         }
 
-        private Applicant GetApplicantFromReader(MySqlDataReader reader)
+        private User GetApplicantFromReader(MySqlDataReader reader)
         {
-            return new Applicant(reader.GetInt32(0),
+            return new User(reader.GetInt32(0),
                 reader.GetString(1),
-                reader.GetString(2),
-                reader.GetDouble(3),
-                reader.GetInt32(4));
+                reader.GetInt32(2),
+                reader.GetString(3),
+                null);
         }
 
-        private void ProvideAllParameters(MySqlCommand cmd, Applicant applicant)
+        private void ProvideAllParameters(MySqlCommand cmd, User user)
         {
-            cmd.Parameters.AddWithValue("@FirstName", applicant.FirstName);
-            cmd.Parameters.AddWithValue("@SecondName", applicant.SecondName);
-            cmd.Parameters.AddWithValue("@Mark", applicant.Marks);
-            cmd.Parameters.AddWithValue("@NumberOfSchool", applicant.NumberOfSchool);
+            cmd.Parameters.AddWithValue("@SecondName", user.SecondName);
+            cmd.Parameters.AddWithValue("@YearOfConnection", user.YearOfConnection);
+            cmd.Parameters.AddWithValue("@PhoneNumber", user.PhoneNumber);
+            //cmd.Parameters.AddWithValue("@NumberOfSchool", user.NumberOfSchool);
         }
     }
 }

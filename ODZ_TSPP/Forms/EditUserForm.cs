@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using ODZ_TSPP.Entity;
 using ODZ_TSPP.Implementation;
-using ODZ_TSPP.Interface;
+using ODZ_TSPP.Service.Interface;
 
 namespace ODZ_TSPP
 {
@@ -10,7 +10,7 @@ namespace ODZ_TSPP
     {
         private IApplicantRepository _applicantRepository = new ApplicantRepository();
 
-        Applicant applicant = null;
+        User user = null;
         
         public EditUserForm()
         {
@@ -18,19 +18,19 @@ namespace ODZ_TSPP
             lblTitle.Text = "Add the user";
         }
 
-        public EditUserForm(Applicant applicant)
+        public EditUserForm(User user)
         {
             InitializeComponent();
             btn1.Text = "Update";
-            this.applicant = applicant;
+            this.user = user;
             lblTitle.Text = "Update the user";
             //Validation
             //this.applicant.onValidationError += Contact_onValidationError;
 
-            txtFirstName.Text = this.applicant.FirstName;
-            txtLastName.Text = this.applicant.SecondName;
-            txtMarks.Text = this.applicant.Marks.ToString();
-            txtNumberOfSchool.Text = this.applicant.NumberOfSchool.ToString();
+            txtLastName.Text = this.user.SecondName;
+            txtYearOfConnection.Text = this.user.YearOfConnection.ToString();
+            txtPhoneNumber.Text = this.user.PhoneNumber;
+            //txtNumberOfSchool.Text = this._user.NumberOfSchool.ToString();
         }
         void ShowError(string Text)
         {
@@ -48,25 +48,26 @@ namespace ODZ_TSPP
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (applicant == null)
+            if (user == null)
             {
-                applicant = new Applicant(txtFirstName.Text,
-                    txtLastName.Text,
-                    Double.Parse(txtMarks.Text),
-                    int.Parse(txtNumberOfSchool.Text));
+                user = new User(
+                    txtLastName.Text, 
+                    int.Parse(txtYearOfConnection.Text),
+                    txtPhoneNumber.Text,
+                    null);
                 
-                if (_applicantRepository.addApplicant(applicant) > 0)
+                if (_applicantRepository.addApplicant(user) > 0)
                 {
                     MessageBox.Show("User has been saved");
                 }
             }
             else
             {
-                applicant.FirstName = txtFirstName.Text;
-                applicant.SecondName = txtLastName.Text;
-                applicant.Marks = Double.Parse(txtMarks.Text);
-                applicant.NumberOfSchool = int.Parse(txtNumberOfSchool.Text);
-                if (_applicantRepository.EditApplicant(applicant) > 0) MessageBox.Show("User has been udated");
+                user.SecondName = txtLastName.Text;
+                user.YearOfConnection = int.Parse(txtYearOfConnection.Text);
+                user.PhoneNumber = txtPhoneNumber.Text;
+                //addAdress
+                if (_applicantRepository.EditApplicant(user) > 0) MessageBox.Show("User has been udated");
             }
             this.Close();
         }

@@ -2,6 +2,6 @@
 {
     public class Configs
     {
-        public const string connectionString = "Server=localhost;Database=tspp;Uid=root;Pwd=123;";
+        public const string ConnectionString = "Server=localhost;Database=tspp;Uid=root;Pwd=123;";
     }
 }

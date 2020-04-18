@@ -3,7 +3,7 @@
  using System.Windows.Forms;
  using ODZ_TSPP.Entity;
  using ODZ_TSPP.Implementation;
- using ODZ_TSPP.Interface;
+ using ODZ_TSPP.Service.Interface;
 
  namespace ODZ_TSPP
 {
@@ -25,7 +25,7 @@
         {
             if(txtSearch.Text.Trim().Length > 0)
             {
-                PopulateData(new List<Applicant>());
+                PopulateData(new List<User>());
             }
             else
             {
@@ -33,17 +33,17 @@
             }
         }
 
-        void PopulateData(IEnumerable<Applicant> applicants)
+        void PopulateData(IEnumerable<User> applicants)
         {
             table.Rows.Clear();
             foreach (var applicant in applicants)
             {
                 table.Rows.Add(new object[]{
                     applicant.Id,
-                    applicant.FirstName,
                     applicant.SecondName,
-                    applicant.Marks,
-                    applicant.NumberOfSchool,
+                    applicant.YearOfConnection,
+                    applicant.PhoneNumber,
+                    null,
                     "Edit",
                     "Delete"
                 });
@@ -65,15 +65,15 @@
         {
             if(e.ColumnIndex == 5) //edit
             {
-                new EditUserForm((Applicant) table.CurrentRow.Tag).ShowDialog();
+                new EditUserForm((User) table.CurrentRow.Tag).ShowDialog();
                 ReloadData();
             }
             if (e.ColumnIndex == 6) //delete
             {
-                Applicant applicant = (Applicant) table.CurrentRow.Tag;
-                if (MessageBox.Show("Do you wont to delete " + applicant.FirstName +"?","CONFIRM", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
+                User user = (User) table.CurrentRow.Tag;
+                if (MessageBox.Show("Do you want to delete " + user.SecondName +"?","CONFIRM", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
                 {
-                    _applicantRepository.RemoveApplicantById(applicant.Id);
+                    _applicantRepository.RemoveApplicantById(user.Id);
                     ReloadData();
                 }
             }

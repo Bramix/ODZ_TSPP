@@ -11,8 +11,8 @@ namespace ODZ_TSPP
         [STAThread]
         public static void Main()
         {
-            String script = File.ReadAllText( "..\\..\\Start.sql");
-            using (MySqlConnection conn = new MySqlConnection(Configs.connectionString))
+            var script = File.ReadAllText( "..\\..\\Start.sql");
+            using (MySqlConnection conn = new MySqlConnection(Configs.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand(script, conn))
             {
                 conn.Open();
