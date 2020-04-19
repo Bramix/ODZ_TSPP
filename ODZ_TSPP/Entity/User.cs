@@ -6,23 +6,23 @@
         private string secondName;
         private int yearOfConnection;
         private string phoneNumber;
-        private Addres addres;
+        private Address address;
 
-        public User(int id, string secondName, int yearOfConnection, string phoneNumber, Addres addres)
+        public User(int id, string secondName, int yearOfConnection, string phoneNumber, Address address)
         {
             this.id = id;
             this.secondName = secondName;
             this.yearOfConnection = yearOfConnection;
             this.phoneNumber = phoneNumber;
-            this.addres = addres;
+            this.address = address;
         }
 
-        public User(string secondName, int yearOfConnection, string phoneNumber, Addres addres)
+        public User(string secondName, int yearOfConnection, string phoneNumber, Address address)
         {
             this.secondName = secondName;
             this.yearOfConnection = yearOfConnection;
             this.phoneNumber = phoneNumber;
-            this.addres = addres;
+            this.address = address;
         }
 
 
@@ -50,10 +50,15 @@
             set => phoneNumber = value;
         }
 
-        public Addres Addres
+        public Address Address
         {
-            get => addres;
-            set => addres = value;
+            get => address;
+            set => address = value;
+        }
+
+        public override string ToString()
+        {
+            return $"{nameof(id)}: {id}, {nameof(secondName)}: {secondName}, {nameof(yearOfConnection)}: {yearOfConnection}, {nameof(phoneNumber)}: {phoneNumber}, {nameof(address)}: {address.ToString()}";
         }
     }
 }

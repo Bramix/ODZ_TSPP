@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 using ODZ_TSPP.Entity;
-using ODZ_TSPP.Implementation;
+using ODZ_TSPP.Service.Implementation.DAO;
 using ODZ_TSPP.Service.Interface;
 
 namespace ODZ_TSPP
 {
     public partial class EditUserForm : Form
     {
-        private IApplicantRepository _applicantRepository = new ApplicantRepository();
+        private IUserRepository _userRepository = new UserRepository();
 
         User user = null;
         
@@ -30,6 +30,10 @@ namespace ODZ_TSPP
             txtLastName.Text = this.user.SecondName;
             txtYearOfConnection.Text = this.user.YearOfConnection.ToString();
             txtPhoneNumber.Text = this.user.PhoneNumber;
+            txtCity.Text = this.user.Address.City;
+            txtStreet.Text = this.user.Address.Street;
+            txtNumberOfTheHouse.Text = this.user.Address.NumberOfHouse;
+            txtNumberOfFlat.Text = this.user.Address.NumberOfFlat.ToString();
             //txtNumberOfSchool.Text = this._user.NumberOfSchool.ToString();
         }
         void ShowError(string Text)
@@ -39,12 +43,6 @@ namespace ODZ_TSPP
             tmrError.Start();
         }
         
-        private void tmrError_Tick(object sender, EventArgs e)
-        {
-            tmrError.Stop();
-            pnlError.Visible = false;
-
-        }
 
         private void btn1_Click(object sender, EventArgs e)
         {
@@ -54,11 +52,12 @@ namespace ODZ_TSPP
                     txtLastName.Text, 
                     int.Parse(txtYearOfConnection.Text),
                     txtPhoneNumber.Text,
-                    null);
+                    new Address(txtCity.Text, txtStreet.Text, txtNumberOfTheHouse.Text,int.Parse(txtNumberOfFlat.Text))
+                    );
                 
-                if (_applicantRepository.addApplicant(user) > 0)
+                if (_userRepository.addUser(user) > 0)
                 {
-                    MessageBox.Show("User has been saved");
+                    MessageBox.Show("The user has been saved");
                 }
             }
             else
@@ -66,15 +65,11 @@ namespace ODZ_TSPP
                 user.SecondName = txtLastName.Text;
                 user.YearOfConnection = int.Parse(txtYearOfConnection.Text);
                 user.PhoneNumber = txtPhoneNumber.Text;
-                //addAdress
-                if (_applicantRepository.EditApplicant(user) > 0) MessageBox.Show("User has been udated");
+                user.Address = new Address(user.Address.Id, txtCity.Text, txtStreet.Text, txtPhoneNumber.Text, int.Parse(txtNumberOfFlat.Text), user.Address.UserId);
+                if (_userRepository.EditUser(user) > 0) MessageBox.Show("The user has been updated");
             }
             this.Close();
         }
-
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

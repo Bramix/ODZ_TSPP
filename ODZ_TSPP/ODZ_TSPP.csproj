@@ -73,7 +73,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Addres.cs" />
+    <Compile Include="Configs\ConfigStrings.cs" />
+    <Compile Include="Configs\Namings.cs" />
+    <Compile Include="Entity\Address.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Forms\EditUserForm.cs">
       <SubType>Form</SubType>
@@ -88,10 +90,13 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Configs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\Implementation\ApplicantRepository.cs" />
-    <Compile Include="Service\Interface\IApplicantRepository.cs" />
+    <Compile Include="Service\Implementation\DAO\UserRepository.cs" />
+    <Compile Include="Service\Implementation\DataReaderParser.cs" />
+    <Compile Include="Service\Implementation\DataValidator.cs" />
+    <Compile Include="Service\Interface\DAO\IUserRepository.cs" />
+    <Compile Include="Service\Interface\IDataReaderParser.cs" />
+    <Compile Include="Service\Interface\IDataValidator.cs" />
     <EmbeddedResource Include="Forms\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>

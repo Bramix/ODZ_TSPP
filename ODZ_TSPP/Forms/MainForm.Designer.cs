@@ -1,4 +1,7 @@
-﻿namespace ODZ_TSPP
+﻿using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+
+namespace ODZ_TSPP
 {
     partial class MainForm
     {
@@ -25,7 +28,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -39,6 +41,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -48,43 +51,31 @@
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlHeader.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (78)))), ((int) (((byte) (160)))), ((int) (((byte) (160)))));
+            this.pnlHeader.Controls.Add(this.panel1);
             this.pnlHeader.Controls.Add(this.label1);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(1);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1732, 1000);
             this.pnlHeader.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (78)))), ((int) (((byte) (160)))), ((int) (((byte) (160)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(445, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(126, 0, 45, 0);
-            this.label1.Size = new System.Drawing.Size(476, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Полный вперееед!";
-            // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.table);
-            this.panel1.Location = new System.Drawing.Point(44, 70);
+            this.panel1.Location = new System.Drawing.Point(44, 72);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(27, 24, 27, 24);
-            this.panel1.Size = new System.Drawing.Size(1386, 758);
+            this.panel1.Size = new System.Drawing.Size(1641, 692);
             this.panel1.TabIndex = 1;
             // 
             // button2
@@ -95,18 +86,18 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(222, 26);
+            this.button2.Location = new System.Drawing.Point(243, 26);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(162, 54);
             this.button2.TabIndex = 4;
             this.button2.Text = "Save info";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(1038, 42);
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(1300, 29);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(310, 26);
@@ -115,7 +106,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1003, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(1254, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 25);
@@ -131,7 +122,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(28, 29);
+            this.button1.Location = new System.Drawing.Point(40, 28);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 51);
@@ -144,17 +135,18 @@
             // 
             this.table.AllowUserToAddRows = false;
             this.table.AllowUserToDeleteRows = false;
+            this.table.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.Color.White;
             this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.Column1, this.Column2, this.Column3, this.Column4, this.Column5, this.edit, this.delete});
-            this.table.Location = new System.Drawing.Point(28, 100);
+            this.table.Location = new System.Drawing.Point(40, 100);
             this.table.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.table.Name = "table";
             this.table.ReadOnly = true;
             this.table.RowHeadersVisible = false;
-            this.table.Size = new System.Drawing.Size(1346, 563);
+            this.table.Size = new System.Drawing.Size(1570, 563);
             this.table.TabIndex = 0;
             this.table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellClick);
             // 
@@ -185,9 +177,11 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "NUMBER OF SCHOOL";
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.Column5.HeaderText = "Address";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 5;
             // 
             // edit
             // 
@@ -219,6 +213,21 @@
             this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (78)))), ((int) (((byte) (160)))), ((int) (((byte) (160)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(675, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(126, 0, 45, 0);
+            this.label1.Size = new System.Drawing.Size(372, 45);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Contact Info";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -226,7 +235,6 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1732, 840);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlHeader);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimizeBox = false;
@@ -235,7 +243,6 @@
             this.Text = "Persons";
             this.Shown += new System.EventHandler(this.frmContactList_Shown);
             this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();

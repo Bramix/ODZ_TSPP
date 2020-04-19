@@ -1,15 +1,16 @@
 ﻿﻿using System;
  using System.Collections.Generic;
+ using System.Linq;
  using System.Windows.Forms;
  using ODZ_TSPP.Entity;
- using ODZ_TSPP.Implementation;
+ using ODZ_TSPP.Service.Implementation.DAO;
  using ODZ_TSPP.Service.Interface;
 
  namespace ODZ_TSPP
 {
     public partial class MainForm : Form
     {
-        private IApplicantRepository _applicantRepository = new ApplicantRepository();
+        private IUserRepository _userRepository = new UserRepository();
         public MainForm()
         {
             InitializeComponent();
@@ -25,29 +26,30 @@
         {
             if(txtSearch.Text.Trim().Length > 0)
             {
-                PopulateData(new List<User>());
+                List<User> users = _userRepository.GetAllUsers();
+                PopulateData(users.FindAll(user => user.ToString().ToUpper().Contains(txtSearch.Text.ToUpper())));
             }
             else
             {
-                PopulateData(_applicantRepository.GetAllApplicants());
+                PopulateData(_userRepository.GetAllUsers());
             }
         }
 
-        void PopulateData(IEnumerable<User> applicants)
+        void PopulateData(IEnumerable<User> users)
         {
             table.Rows.Clear();
-            foreach (var applicant in applicants)
+            foreach (User user in users)
             {
                 table.Rows.Add(new object[]{
-                    applicant.Id,
-                    applicant.SecondName,
-                    applicant.YearOfConnection,
-                    applicant.PhoneNumber,
-                    null,
+                    user.Id,
+                    user.SecondName,
+                    user.YearOfConnection,
+                    user.PhoneNumber,
+                    user.Address.ToString(),
                     "Edit",
                     "Delete"
                 });
-                table.Rows[table.RowCount - 1].Tag = applicant;
+                table.Rows[table.RowCount - 1].Tag = user;
             }
         }
 
@@ -73,20 +75,11 @@
                 User user = (User) table.CurrentRow.Tag;
                 if (MessageBox.Show("Do you want to delete " + user.SecondName +"?","CONFIRM", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
                 {
-                    _applicantRepository.RemoveApplicantById(user.Id);
+                    _userRepository.RemoveUser(user);
                     ReloadData();
                 }
             }
         }
-
-       private void pnlHeader_Paint(object sender, PaintEventArgs e)
-       {
-           throw new System.NotImplementedException();
-       }
-
-       private void button2_Click(object sender, EventArgs e)
-       {
-           throw new System.NotImplementedException();
-       }
+       
     }
 }
