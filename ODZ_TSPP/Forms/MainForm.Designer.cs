@@ -87,34 +87,36 @@ namespace ODZ_TSPP
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::ODZ_TSPP.Properties.Resources.excel;
-            this.pictureBox4.Location = new System.Drawing.Point(305, 13);
+            this.pictureBox4.Location = new System.Drawing.Point(259, 13);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(90, 68);
+            this.pictureBox4.Size = new System.Drawing.Size(78, 68);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.clickExcelButton);
+
             // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::ODZ_TSPP.Properties.Resources.wordIxon;
-            this.pictureBox3.Location = new System.Drawing.Point(170, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(152, 13);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(90, 68);
+            this.pictureBox3.Size = new System.Drawing.Size(73, 68);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.ClickWordButton);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::ODZ_TSPP.Properties.Resources.addButton;
-            this.pictureBox2.Location = new System.Drawing.Point(40, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 16);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(85, 68);
+            this.pictureBox2.Size = new System.Drawing.Size(73, 65);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;

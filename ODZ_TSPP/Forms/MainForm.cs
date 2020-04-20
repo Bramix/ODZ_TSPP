@@ -5,6 +5,7 @@
  using ODZ_TSPP.Entity;
  using ODZ_TSPP.Service.Implementation.DAO;
  using ODZ_TSPP.Service.Interface;
+ using ODZ_TSPP.Service.Interface.FilerWorker;
 
  namespace ODZ_TSPP
 {
@@ -81,9 +82,14 @@
             }
         }
 
-       private void pictureBox3_Click(object sender, EventArgs e)
+       private void ClickWordButton(object sender, EventArgs e)
        {
-           throw new System.NotImplementedException();
+           new UploadOrDownLoadForm(new WordFileWorker()).ShowDialog();
+       }
+
+       private void clickExcelButton(object sender, EventArgs e)
+       {
+           new UploadOrDownLoadForm(new ExcelFileWorker()).ShowDialog();
        }
     }
 }
