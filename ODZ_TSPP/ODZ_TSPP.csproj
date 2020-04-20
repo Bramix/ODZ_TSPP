@@ -130,6 +130,11 @@
     <Folder Include="Service" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\addButton1.png" />
+    <Content Include="Resources\excel.png" />
+    <Content Include="Resources\excelicon.png" />
+    <Content Include="Resources\findIcon.png" />
+    <Content Include="Resources\wordIxon.png" />
     <Content Include="Start.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

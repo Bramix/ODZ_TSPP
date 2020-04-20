@@ -25,3 +25,22 @@ C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\bin\Debug
 C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\bin\Debug\Renci.SshNet.xml
 C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.CopyComplete
 C:\Users\brami\OneDrive\Рабочий стол\TSPP\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.EditUserForm.resources
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.exe.config
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.exe
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.pdb
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\BouncyCastle.Crypto.dll
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\Google.Protobuf.dll
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\MySql.Data.dll
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\Renci.SshNet.dll
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\Ubiety.Dns.Core.dll
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\Google.Protobuf.xml
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\MySql.Data.xml
+E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\Renci.SshNet.xml
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csprojAssemblyReference.cache
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.EditUserForm.resources
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.MainForm.resources
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.Properties.Resources.resources
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.GenerateResource.cache
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.CopyComplete
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.exe
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.pdb
