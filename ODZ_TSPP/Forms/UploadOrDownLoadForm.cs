@@ -22,7 +22,7 @@ namespace ODZ_TSPP
 
         private void upload_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            _fileWorker.ReadFile();
             this.Close();
         }
     }

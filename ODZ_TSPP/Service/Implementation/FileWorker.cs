@@ -5,7 +5,7 @@ namespace ODZ_TSPP.Service.Implementation
 {
     public interface IFileWorker
     {
-        List<User> ReadFile(string filePath);
+        List<User> ReadFile();
         void WriteUsersToFile();
     }
 }

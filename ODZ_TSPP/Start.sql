@@ -20,13 +20,13 @@ CREATE TABLE IF NOT EXISTS `address` (
   FOREIGN KEY (UserId) REFERENCES Users(id)
 );
 
-INSERT INTO `users` (`SecondName`, `PhoneNumber`, `YearOfConnection`) VALUES
+/*INSERT INTO `users` (`SecondName`, `PhoneNumber`, `YearOfConnection`) VALUES
 ( 'Go', '100', '2000'),
 ( 'Bob', '200', '444444');
 
 
 INSERT INTO `address` (`City`, `Street`, `NumberOfHouse`,`NumberOfFlat`, `UserId`) VALUES
 ( 'Sumy', 'Supruna', '10A', '10','1'),
-( 'Sumy', 'Supruna', '10A', '10','2');
+( 'Sumy', 'Supruna', '10A', '10','2');*/
 
 commit;

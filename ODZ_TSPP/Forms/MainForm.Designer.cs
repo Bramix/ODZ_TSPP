@@ -94,8 +94,7 @@ namespace ODZ_TSPP
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.clickExcelButton);
-
+            this.pictureBox4.Click += new System.EventHandler(this.ClickWordButton);
             // 
             // pictureBox3
             // 

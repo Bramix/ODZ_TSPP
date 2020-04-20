@@ -10,9 +10,10 @@ namespace ODZ_TSPP.Service.Interface.FilerWorker
     public class ExcelFileWorker: IFileWorker
     {
         UserRepository _userRepository = new UserRepository();
-        public List<User> ReadFile(string filePath)
+        public List<User> ReadFile()
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show("Not implemented yet");
+            return null;
         }
 
         public void WriteUsersToFile()

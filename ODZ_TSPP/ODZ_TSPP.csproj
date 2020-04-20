@@ -106,13 +106,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\Implementation\DAO\UserRepository.cs" />
     <Compile Include="Service\Implementation\DataReaderParser.cs" />
-    <Compile Include="Service\Implementation\DataValidator.cs" />
     <Compile Include="Service\Implementation\FileWorker.cs" />
     <Compile Include="Service\Interface\DAO\IUserRepository.cs" />
     <Compile Include="Service\Interface\FilerWorker\ExcelFileWorker.cs" />
     <Compile Include="Service\Interface\FilerWorker\WordFileWorker.cs" />
     <Compile Include="Service\Interface\IDataReaderParser.cs" />
-    <Compile Include="Service\Interface\IDataValidator.cs" />
     <EmbeddedResource Include="Forms\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
