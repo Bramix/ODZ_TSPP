@@ -23,7 +23,7 @@
             ReloadData();
         }
 
-        void ReloadData()
+        public void ReloadData()
         {
             if(txtSearch.Text.Trim().Length > 0)
             {
@@ -35,7 +35,7 @@
                 PopulateData(_userRepository.GetAllUsers());
             }
         }
-
+        
         void PopulateData(IEnumerable<User> users)
         {
             table.Rows.Clear();
@@ -84,12 +84,21 @@
 
        private void ClickWordButton(object sender, EventArgs e)
        {
-           new UploadOrDownLoadForm(new WordFileWorker()).ShowDialog();
+           new UploadOrDownLoadForm(new WordFileWorker(), this).ShowDialog();
        }
 
-       private void clickExcelButton(object sender, EventArgs e)
+       private void ClickExcelButton(object sender, EventArgs e)
        {
-           new UploadOrDownLoadForm(new ExcelFileWorker()).ShowDialog();
+           new UploadOrDownLoadForm(new ExcelFileWorker(), this).ShowDialog();
        }
+
+       private void pictureBox5_Click(object sender, EventArgs e)
+       {
+           MessageBox.Show("Not implemented yet");
+       }
+
+       private void pictureBox6_Click(object sender, EventArgs e)
+       {
+           MessageBox.Show("Not implemented yet");       }
     }
 }

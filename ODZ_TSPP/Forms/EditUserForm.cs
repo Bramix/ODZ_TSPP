@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ODZ_TSPP.Entity;
 using ODZ_TSPP.Service.Implementation.DAO;
@@ -70,6 +71,5 @@ namespace ODZ_TSPP
                 MessageBox.Show("NOT CORRECT DATA");
             }
         }
-        
     }
 }

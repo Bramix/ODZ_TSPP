@@ -61,8 +61,7 @@
 
         public override string ToString()
         {
-            var numberOfFlat = NumberOfHouse != null ? $", flat {NumberOfFlat}" : "";
-            return $"{city}, {street} street, house {numberOfHouse}{numberOfFlat}";
+            return $"{nameof(city)}: {city}, {nameof(street)}: {street}, {nameof(numberOfHouse)}: {numberOfHouse}, {nameof(numberOfFlat)}: {numberOfFlat}";
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace ODZ_TSPP.Entity
+﻿using System.Collections.Generic;
+
+namespace ODZ_TSPP.Entity
 {
     public class User
     {
@@ -23,6 +25,15 @@
             this.yearOfConnection = yearOfConnection;
             this.phoneNumber = phoneNumber;
             this.address = address;
+        }
+
+        public User(List<string> properties)
+        {
+            this.secondName = properties[0];
+            this.yearOfConnection = int.Parse(properties[1]);
+            this.phoneNumber = properties[2];
+            this.address = new Address(properties[3], properties[4], 
+                properties[5], int.Parse(properties[6]));
         }
 
 
@@ -58,7 +69,8 @@
 
         public override string ToString()
         {
-            return $"{nameof(id)}: {id}, {nameof(secondName)}: {secondName}, {nameof(yearOfConnection)}: {yearOfConnection}, {nameof(phoneNumber)}: {phoneNumber}, {nameof(address)}: {address.ToString()}";
+            return $"{nameof(secondName)}: {secondName}, {nameof(yearOfConnection)}: {yearOfConnection}, {nameof(phoneNumber)}: {phoneNumber}, {address}";
         }
+        
     }
 }

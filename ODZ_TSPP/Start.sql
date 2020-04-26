@@ -1,7 +1,4 @@
-﻿drop table address;
-drop table users;
-
-
+﻿
 CREATE TABLE IF NOT EXISTS `users` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `SecondName` varchar(50) NOT NULL,
