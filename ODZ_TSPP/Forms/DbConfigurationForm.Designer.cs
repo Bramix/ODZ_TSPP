@@ -42,12 +42,11 @@ namespace ODZ_TSPP
             this.Complete = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 31);
+            this.textBox1.Location = new System.Drawing.Point(137, 31);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(179, 26);
             this.textBox1.TabIndex = 0;
@@ -56,7 +55,7 @@ namespace ODZ_TSPP
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Location = new System.Drawing.Point(2, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 30);
             this.label1.TabIndex = 1;
@@ -65,7 +64,7 @@ namespace ODZ_TSPP
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.label2.Location = new System.Drawing.Point(12, 70);
+            this.label2.Location = new System.Drawing.Point(2, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 42);
             this.label2.TabIndex = 2;
@@ -73,7 +72,7 @@ namespace ODZ_TSPP
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(135, 76);
+            this.textBox2.Location = new System.Drawing.Point(137, 74);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(179, 26);
             this.textBox2.TabIndex = 3;
@@ -82,7 +81,7 @@ namespace ODZ_TSPP
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.label3.Location = new System.Drawing.Point(12, 160);
+            this.label3.Location = new System.Drawing.Point(2, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 37);
             this.label3.TabIndex = 4;
@@ -99,15 +98,15 @@ namespace ODZ_TSPP
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.label4.Location = new System.Drawing.Point(12, 208);
+            this.label4.Location = new System.Drawing.Point(2, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 37);
+            this.label4.Size = new System.Drawing.Size(127, 37);
             this.label4.TabIndex = 6;
             this.label4.Text = "Database";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(135, 117);
+            this.textBox4.Location = new System.Drawing.Point(135, 116);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(179, 26);
             this.textBox4.TabIndex = 7;
@@ -118,7 +117,7 @@ namespace ODZ_TSPP
             this.Complete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Complete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Complete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Complete.Location = new System.Drawing.Point(56, 286);
+            this.Complete.Location = new System.Drawing.Point(57, 257);
             this.Complete.Name = "Complete";
             this.Complete.Size = new System.Drawing.Size(205, 38);
             this.Complete.TabIndex = 8;
@@ -137,29 +136,17 @@ namespace ODZ_TSPP
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.label5.Location = new System.Drawing.Point(12, 112);
+            this.label5.Location = new System.Drawing.Point(2, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 37);
             this.label5.TabIndex = 10;
             this.label5.Text = "User";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox1.Location = new System.Drawing.Point(83, 256);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(155, 24);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Don\'t ask again";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // DbConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 336);
-            this.ControlBox = false;
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(326, 316);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.Complete);
@@ -171,15 +158,17 @@ namespace ODZ_TSPP
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DbConfigurationForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuration";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button Complete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
