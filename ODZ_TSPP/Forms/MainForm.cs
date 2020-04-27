@@ -97,8 +97,9 @@
            MessageBox.Show("Not implemented yet");
        }
 
-       private void pictureBox6_Click(object sender, EventArgs e)
+       private void ClickCongigure(object sender, EventArgs e)
        {
-           MessageBox.Show("Not implemented yet");       }
+           new DbConfigurationForm().Show();
+       }
     }
 }

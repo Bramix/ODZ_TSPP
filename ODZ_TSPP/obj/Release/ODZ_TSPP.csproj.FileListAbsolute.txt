@@ -21,3 +21,4 @@ E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Release\ODZ_TSPP.csproj.GenerateResource.cache
 E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Release\ODZ_TSPP.csproj.CopyComplete
 E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Release\ODZ_TSPP.exe
 E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Release\ODZ_TSPP.pdb
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Release\ODZ_TSPP.DbConfigurationForm.resources

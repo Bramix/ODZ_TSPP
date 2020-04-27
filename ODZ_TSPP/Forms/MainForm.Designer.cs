@@ -97,7 +97,7 @@ namespace ODZ_TSPP
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.clickCongigure);
+            this.pictureBox6.Click += new System.EventHandler(this.ClickCongigure);
             // 
             // pictureBox5
             // 

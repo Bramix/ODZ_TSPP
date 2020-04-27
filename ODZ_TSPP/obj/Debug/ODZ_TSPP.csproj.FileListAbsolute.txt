@@ -48,3 +48,4 @@ E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.UploadOrDownLoadForm.resources
 E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\IronXL.dll
 E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\IronXL.xml
 E:\pr\ODZ_TSPP\ODZ_TSPP\bin\Debug\DocumentFormat.OpenXml.dll
+E:\pr\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.DbConfigurationForm.resources

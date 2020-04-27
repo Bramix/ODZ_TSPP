@@ -11,17 +11,40 @@ namespace ODZ_TSPP
         [STAThread]
         public static void Main()
         {
-            var script = File.ReadAllText( "..\\..\\Start.sql");
+            ConfigStrings.ConnectionString = File.ReadAllText("..\\..\\Connection.txt");
+            if (!string.IsNullOrEmpty(ConfigStrings.ConnectionString))
+            {
+                try
+                {
+                    RunScript();
+                }
+                catch (Exception)
+                {
+                    Application.Run(new DbConfigurationForm());
+                }
+            }
+            else
+            {
+                Application.Run(new DbConfigurationForm());
+            }
+            
+        }
+
+        public static void RunScript()
+        {
+            var script = File.ReadAllText("..\\..\\Start.sql");
             using (MySqlConnection conn = new MySqlConnection(ConfigStrings.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand(script, conn))
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
-            
+                
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+
         }
+            
     }
 }
