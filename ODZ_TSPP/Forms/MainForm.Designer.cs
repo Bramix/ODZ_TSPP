@@ -79,11 +79,11 @@ namespace ODZ_TSPP
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.table);
-            this.panel1.Location = new System.Drawing.Point(44, 72);
+            this.panel1.Location = new System.Drawing.Point(44, 38);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(27, 24, 27, 24);
-            this.panel1.Size = new System.Drawing.Size(1641, 754);
+            this.panel1.Size = new System.Drawing.Size(1641, 788);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox6
@@ -111,7 +111,7 @@ namespace ODZ_TSPP
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 8;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.Click += new System.EventHandler(this.FilterByFields);
             // 
             // pictureBox4
             // 
@@ -176,7 +176,7 @@ namespace ODZ_TSPP
             this.table.Name = "table";
             this.table.ReadOnly = true;
             this.table.RowHeadersVisible = false;
-            this.table.Size = new System.Drawing.Size(1570, 638);
+            this.table.Size = new System.Drawing.Size(1570, 672);
             this.table.TabIndex = 0;
             this.table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellClick);
             // 

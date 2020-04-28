@@ -92,9 +92,9 @@
            new UploadOrDownLoadForm(new ExcelFileWorker(), this).ShowDialog();
        }
 
-       private void pictureBox5_Click(object sender, EventArgs e)
+       private void FilterByFields(object sender, EventArgs e)
        {
-           MessageBox.Show("Not implemented yet");
+           new EditUserForm("Filter users", "Filter").Show();
        }
 
        private void ClickCongigure(object sender, EventArgs e)

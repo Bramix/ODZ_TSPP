@@ -19,6 +19,13 @@ namespace ODZ_TSPP
             lblTitle.Text = "Add the user";
         }
 
+        public EditUserForm(string title, string buttonName)
+        {
+            InitializeComponent();
+            lblTitle.Text = title;
+            btn1.Text = buttonName;
+        }
+
         public EditUserForm(User user)
         {
             InitializeComponent();
