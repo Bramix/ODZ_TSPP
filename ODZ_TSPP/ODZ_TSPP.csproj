@@ -107,6 +107,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UploadOrDownLoadForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UploadOrDownLoadForm.resx">
       <DependentUpon>UploadOrDownLoadForm.cs</DependentUpon>
@@ -159,6 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Connection.txt" />
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\add1.png" />
+    <Content Include="Resources\add2.jpg" />
     <Content Include="Resources\addButton1.png" />
     <Content Include="Resources\downIcon.png" />
     <Content Include="Resources\downloadIcon.png" />
