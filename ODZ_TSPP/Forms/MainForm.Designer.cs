@@ -31,6 +31,7 @@ namespace ODZ_TSPP
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@ namespace ODZ_TSPP
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.table = new System.Windows.Forms.DataGridView();
@@ -52,16 +52,19 @@ namespace ODZ_TSPP
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -70,7 +73,6 @@ namespace ODZ_TSPP
             this.pnlHeader.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlHeader.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlHeader.Controls.Add(this.panel4);
-            this.pnlHeader.Controls.Add(this.txtSearch);
             this.pnlHeader.Controls.Add(this.panel3);
             this.pnlHeader.Controls.Add(this.panel2);
             this.pnlHeader.Controls.Add(this.panel1);
@@ -81,10 +83,20 @@ namespace ODZ_TSPP
             this.pnlHeader.Size = new System.Drawing.Size(1732, 1000);
             this.pnlHeader.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ODZ_TSPP.Properties.Resources.findIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -106,9 +118,8 @@ namespace ODZ_TSPP
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.BackColor = System.Drawing.SystemColors.Info;
-            this.txtSearch.Location = new System.Drawing.Point(171, 92);
+            this.txtSearch.Location = new System.Drawing.Point(63, 20);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(609, 26);
@@ -117,36 +128,40 @@ namespace ODZ_TSPP
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(156, 0);
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Controls.Add(this.txtSearch);
+            this.panel3.Location = new System.Drawing.Point(155, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(27, 24, 27, 24);
-            this.panel3.Size = new System.Drawing.Size(1569, 71);
+            this.panel3.Size = new System.Drawing.Size(1564, 71);
             this.panel3.TabIndex = 10;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (95)))), ((int) (((byte) (160)))), ((int) (((byte) (190)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Location = new System.Drawing.Point(0, 65);
+            this.panel2.Location = new System.Drawing.Point(0, 71);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(27, 24, 27, 24);
-            this.panel2.Size = new System.Drawing.Size(155, 777);
+            this.panel2.Size = new System.Drawing.Size(155, 770);
             this.panel2.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::ODZ_TSPP.Properties.Resources.add;
-            this.pictureBox2.Location = new System.Drawing.Point(30, 76);
+            this.pictureBox2.Location = new System.Drawing.Point(28, 25);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(88, 87);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,10 +174,10 @@ namespace ODZ_TSPP
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::ODZ_TSPP.Properties.Resources.findIcon;
-            this.pictureBox5.Location = new System.Drawing.Point(34, 507);
+            this.pictureBox5.Location = new System.Drawing.Point(30, 343);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(5, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(79, 79);
+            this.pictureBox5.Size = new System.Drawing.Size(86, 79);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 8;
             this.pictureBox5.TabStop = false;
@@ -172,7 +187,7 @@ namespace ODZ_TSPP
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::ODZ_TSPP.Properties.Resources.wordIxon;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 188);
+            this.pictureBox3.Location = new System.Drawing.Point(28, 128);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(88, 87);
@@ -181,24 +196,11 @@ namespace ODZ_TSPP
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.ClickWordButton);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::ODZ_TSPP.Properties.Resources.settings;
-            this.pictureBox6.Location = new System.Drawing.Point(30, 399);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(88, 87);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.ClickCongigure);
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::ODZ_TSPP.Properties.Resources.excel;
-            this.pictureBox4.Location = new System.Drawing.Point(30, 296);
+            this.pictureBox4.Location = new System.Drawing.Point(28, 240);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(88, 78);
@@ -212,11 +214,11 @@ namespace ODZ_TSPP
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.table);
-            this.panel1.Location = new System.Drawing.Point(163, 141);
+            this.panel1.Location = new System.Drawing.Point(163, 81);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(27, 24, 27, 24);
-            this.panel1.Size = new System.Drawing.Size(1565, 701);
+            this.panel1.Size = new System.Drawing.Size(1565, 761);
             this.panel1.TabIndex = 1;
             // 
             // table
@@ -247,13 +249,13 @@ namespace ODZ_TSPP
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.table.DefaultCellStyle = dataGridViewCellStyle4;
             this.table.EnableHeadersVisualStyles = false;
-            this.table.Location = new System.Drawing.Point(8, 0);
+            this.table.Location = new System.Drawing.Point(8, 16);
             this.table.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.table.Name = "table";
             this.table.ReadOnly = true;
             this.table.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.table.RowHeadersVisible = false;
-            this.table.Size = new System.Drawing.Size(1538, 691);
+            this.table.Size = new System.Drawing.Size(1548, 735);
             this.table.TabIndex = 0;
             this.table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellClick);
             // 
@@ -334,6 +336,20 @@ namespace ODZ_TSPP
             this.label1.TabIndex = 0;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::ODZ_TSPP.Properties.Resources.settings;
+            this.pictureBox6.Location = new System.Drawing.Point(1492, 10);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(60, 56);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.ClickCongigure);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -348,17 +364,19 @@ namespace ODZ_TSPP
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Shown += new System.EventHandler(this.frmContactList_Shown);
             this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -375,6 +393,7 @@ namespace ODZ_TSPP
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;

@@ -105,7 +105,5 @@
          {
              new DbConfigurationForm().Show();
          }
-
-
      }
  }
