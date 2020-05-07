@@ -4,9 +4,9 @@ using ODZ_TSPP.Service.Interface;
 
 namespace ODZ_TSPP.Service.Implementation
 {
-    public class DataReaderParser:IDataReaderParser
+    public class DataReaderParser
     {
-        public User GetApplicantFromReader(IDataReader reader)
+        public static User GetApplicantFromReader(IDataReader reader)
         {
             return new User((int) reader[Namings.Id.ToString()],
                 (string) reader[Namings.SecondName.ToString()],
@@ -15,7 +15,7 @@ namespace ODZ_TSPP.Service.Implementation
                 GetAddressFromReader(reader));
         }
 
-        public Address GetAddressFromReader(IDataReader reader)
+        public static Address GetAddressFromReader(IDataReader reader)
         {
             return new Address((int) reader[Namings.Id.ToString()],
                 (string) reader[Namings.City.ToString()],
@@ -24,6 +24,15 @@ namespace ODZ_TSPP.Service.Implementation
                 (int?) reader[Namings.NumberOfFlat.ToString()],
                 (int) reader[Namings.UserId.ToString()]
             );        
+        }
+
+        public static Role GetRoleFromReader(IDataReader reader)
+        {
+            return new Role(
+                (int) reader[Namings.Id.ToString()],
+                (string) reader[Namings.NameOfRole.ToString()],
+                (string) reader[Namings.Password.ToString()]
+            );
         }
     }
 }

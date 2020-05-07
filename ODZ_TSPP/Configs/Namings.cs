@@ -10,6 +10,8 @@
         Street,
         NumberOfHouse,
         NumberOfFlat,
-        UserId
+        UserId,
+        NameOfRole,
+        Password
     }
 }

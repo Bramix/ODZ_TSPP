@@ -11,7 +11,6 @@ namespace ODZ_TSPP.Service.Implementation.DAO
 {
     public class UserRepository:IUserRepository
     {
-        private IDataReaderParser dataReaderParser = new DataReaderParser();
 
         public List<User> GetAllUsers()
         {
@@ -22,7 +21,7 @@ namespace ODZ_TSPP.Service.Implementation.DAO
                     using (var reader = cmd.ExecuteReader())   
                     {
                         while (reader.Read()) 
-                            applicants.Add(dataReaderParser.GetApplicantFromReader(reader));
+                            applicants.Add(DataReaderParser.GetApplicantFromReader(reader));
                     }
             }
 
@@ -39,7 +38,7 @@ namespace ODZ_TSPP.Service.Implementation.DAO
                 using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
-                        return dataReaderParser.GetApplicantFromReader(reader);
+                        return DataReaderParser.GetApplicantFromReader(reader);
                     
                     return null;
                 }

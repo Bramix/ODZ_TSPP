@@ -74,3 +74,4 @@ C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_
 C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.exe
 C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.pdb
 C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.SearchForm.resources
+C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.LoginForm.resources

@@ -17,6 +17,15 @@ CREATE TABLE IF NOT EXISTS `address` (
   FOREIGN KEY (UserId) REFERENCES Users(id)
 );
 
+drop table roles;
+CREATE TABLE IF NOT EXISTS `roles` (
+  `Id` int(2) PRIMARY KEY AUTO_INCREMENT,
+  `NameOfRole` varchar(20) NOT NULL unique,
+  `Password` varchar(200) NOT NULL
+);
+
+INSERT INTO roles(`NameOfRole`, `Password`) VALUES ('ADMIN', '21232F297A57A5A743894A0E4A801FC3'), ('User', 'EE11CBB19052E40B07AAC0CA060C23EE'); 
+
 /*INSERT INTO `users` (`SecondName`, `PhoneNumber`, `YearOfConnection`) VALUES
 ( 'Go', '100', '2000'),
 ( 'Bob', '200', '444444');

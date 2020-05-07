@@ -3,6 +3,7 @@
  using System.Linq;
  using System.Windows.Forms;
  using ODZ_TSPP.Entity;
+ using ODZ_TSPP.Service.Implementation;
  using ODZ_TSPP.Service.Implementation.DAO;
  using ODZ_TSPP.Service.Interface;
  using ODZ_TSPP.Service.Interface.FilerWorker;
@@ -12,10 +13,12 @@
      public partial class MainForm : Form
      {
          private IUserRepository _userRepository = new UserRepository();
+         private IAccessWorker accessWorker = new AccessWorker();
 
-         public MainForm()
-         {
+         public MainForm(){
              InitializeComponent();
+             if(String.IsNullOrEmpty(ConfigStrings.currentUserRole))
+                new LoginForm().ShowDialog();
          }
 
          private void create_user(object sender, EventArgs e)
@@ -68,6 +71,12 @@
 
          private void table_CellClick(object sender, DataGridViewCellEventArgs e)
          {
+             bool isAllowed = accessWorker.CheckAccess(ConfigStrings.currentUserRole.ToString(), UserOperations.Edit.ToString());
+             if (!isAllowed)
+             {
+                 MessageBox.Show($"This action is not allowed for {ConfigStrings.currentUserRole}");
+                 return;
+             }
              if (e.ColumnIndex == 5) //edit
              {
                  new EditUserForm((User) table.CurrentRow.Tag).ShowDialog();
@@ -85,6 +94,7 @@
                  }
              }
          }
+         
 
          private void ClickWordButton(object sender, EventArgs e)
          {
@@ -98,12 +108,17 @@
 
          private void FilterByFields(object sender, EventArgs e)
          {
-             new SearchForm("Filter users").Show();
+             new SearchForm().Show();
          }
 
          private void ClickCongigure(object sender, EventArgs e)
          {
              new DbConfigurationForm().Show();
+         }
+
+         private void ExitClick(object sender, EventArgs e)
+         {
+             new LoginForm().Show();
          }
      }
  }
