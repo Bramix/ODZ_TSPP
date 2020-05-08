@@ -10,5 +10,7 @@ namespace ODZ_TSPP.Service.Interface
         int EditUser (User user);
         int addUser(User user);
         void RemoveUser(User user);
+
+        List<User> GetUsersByQuery(string query);
     }
 }

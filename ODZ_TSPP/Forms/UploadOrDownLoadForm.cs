@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading;
 using System.Windows.Forms;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using DocumentFormat.OpenXml.Spreadsheet;
 using ODZ_TSPP.Entity;
 using ODZ_TSPP.Service.Implementation;
 using ODZ_TSPP.Service.Implementation.DAO;
 using ODZ_TSPP.Service.Interface;
-using Org.BouncyCastle.Crypto.Tls;
 
 namespace ODZ_TSPP
 {

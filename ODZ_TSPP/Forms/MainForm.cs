@@ -12,8 +12,12 @@
      public partial class MainForm : Form
      {
          private IUserRepository _userRepository = new UserRepository();
-
          public MainForm()
+         {
+             InitializeComponent();
+         }
+
+         public MainForm(List <User> users)
          {
              InitializeComponent();
          }
@@ -22,6 +26,11 @@
          {
              new EditUserForm().ShowDialog();
              ReloadData();
+         }
+
+         public void ReloadData(List<User> users)
+         {
+             PopulateData(users);
          }
 
          public void ReloadData()
@@ -98,12 +107,14 @@
 
          private void FilterByFields(object sender, EventArgs e)
          {
-             new SearchForm("Filter users").Show();
+             new SearchForm(this).Show();
          }
 
          private void ClickCongigure(object sender, EventArgs e)
          {
              new DbConfigurationForm().Show();
          }
+
+         
      }
  }

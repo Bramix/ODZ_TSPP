@@ -83,16 +83,6 @@ namespace ODZ_TSPP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add2 {
-            get {
-                object obj = ResourceManager.GetObject("add2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap addButton {
             get {
                 object obj = ResourceManager.GetObject("addButton", resourceCulture);
@@ -103,39 +93,9 @@ namespace ODZ_TSPP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap downIcon {
+        internal static System.Drawing.Bitmap Download {
             get {
-                object obj = ResourceManager.GetObject("downIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap downloadIcon {
-            get {
-                object obj = ResourceManager.GetObject("downloadIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap downloadIcon1 {
-            get {
-                object obj = ResourceManager.GetObject("downloadIcon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap downloadImage {
-            get {
-                object obj = ResourceManager.GetObject("downloadImage", resourceCulture);
+                object obj = ResourceManager.GetObject("Download", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,16 +113,6 @@ namespace ODZ_TSPP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap excelicon {
-            get {
-                object obj = ResourceManager.GetObject("excelicon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap findIcon {
             get {
                 object obj = ResourceManager.GetObject("findIcon", resourceCulture);
@@ -173,9 +123,49 @@ namespace ODZ_TSPP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap findIcon1 {
+            get {
+                object obj = ResourceManager.GetObject("findIcon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap globalSearch {
             get {
                 object obj = ResourceManager.GetObject("globalSearch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone {
+            get {
+                object obj = ResourceManager.GetObject("phone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_symbol {
+            get {
+                object obj = ResourceManager.GetObject("phone_symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setting {
+            get {
+                object obj = ResourceManager.GetObject("setting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,35 +31,35 @@ namespace ODZ_TSPP
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            this.uploadBox = new System.Windows.Forms.PictureBox();
+            this.downLoadBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize) (this.uploadBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.downLoadBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // uploadBox
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::ODZ_TSPP.Properties.Resources.downIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(182, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.download_Click);
+            this.uploadBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uploadBox.Image = global::ODZ_TSPP.Properties.Resources.Download;
+            this.uploadBox.Location = new System.Drawing.Point(182, 6);
+            this.uploadBox.Name = "uploadBox";
+            this.uploadBox.Size = new System.Drawing.Size(110, 93);
+            this.uploadBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.uploadBox.TabIndex = 0;
+            this.uploadBox.TabStop = false;
+            this.uploadBox.Click += new System.EventHandler(this.download_Click);
             // 
-            // pictureBox2
+            // downLoadBox
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::ODZ_TSPP.Properties.Resources.upload;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(101, 93);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.upload_Click);
+            this.downLoadBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.downLoadBox.Image = global::ODZ_TSPP.Properties.Resources.upload;
+            this.downLoadBox.Location = new System.Drawing.Point(37, 6);
+            this.downLoadBox.Name = "downLoadBox";
+            this.downLoadBox.Size = new System.Drawing.Size(101, 93);
+            this.downLoadBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.downLoadBox.TabIndex = 1;
+            this.downLoadBox.TabStop = false;
+            this.downLoadBox.Click += new System.EventHandler(this.upload_Click);
             // 
             // UploadOrDownLoadForm
             // 
@@ -68,8 +68,8 @@ namespace ODZ_TSPP
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(328, 101);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.downLoadBox);
+            this.Controls.Add(this.uploadBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -77,13 +77,13 @@ namespace ODZ_TSPP
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.uploadBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.downLoadBox)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox downLoadBox;
+        private System.Windows.Forms.PictureBox uploadBox;
 
         #endregion
     }

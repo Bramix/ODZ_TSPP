@@ -97,6 +97,22 @@ namespace ODZ_TSPP.Service.Implementation.DAO
             }
         }
 
+        public List<User> GetUsersByQuery(string query)
+        {
+            List <User> applicants = new List<User>();
+            using (MySqlConnection conn = new MySqlConnection(ConfigStrings.ConnectionString)) 
+            using (MySqlCommand cmd = new MySqlCommand(query, conn)) {
+                conn.Open();
+                using (var reader = cmd.ExecuteReader())   
+                {
+                    while (reader.Read()) 
+                        applicants.Add(dataReaderParser.GetApplicantFromReader(reader));
+                }
+            }
+
+            return applicants;
+        }
+
         private void ProvideAllParametersForUser(MySqlCommand cmd, User user)
         {
             cmd.Parameters.AddWithValue($"@{Namings.SecondName.ToString()}", user.SecondName);
