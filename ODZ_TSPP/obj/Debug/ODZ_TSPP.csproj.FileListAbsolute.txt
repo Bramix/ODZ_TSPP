@@ -74,3 +74,29 @@ C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_
 C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.exe
 C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.pdb
 C:\Users\brami\OneDrive\Рабочий стол\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.SearchForm.resources
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.exe.config
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.exe
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\ODZ_TSPP.pdb
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\Google.Protobuf.dll
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\IronXL.dll
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\MySql.Data.dll
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\Renci.SshNet.dll
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\Google.Protobuf.xml
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\IronXL.xml
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\MySql.Data.xml
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\Renci.SshNet.xml
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.DbConfigurationForm.resources
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.EditUserForm.resources
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.MainForm.resources
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.SearchForm.resources
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.UploadOrDownLoadForm.resources
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.Properties.Resources.resources
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.CopyComplete
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.exe
+C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.pdb

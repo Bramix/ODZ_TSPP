@@ -115,6 +115,14 @@
              new DbConfigurationForm().Show();
          }
 
-         
-     }
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
  }
