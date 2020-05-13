@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using ODZ_TSPP.Forms;
 
 namespace ODZ_TSPP
 {
@@ -42,9 +43,9 @@ namespace ODZ_TSPP
                 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new frmSplashScreen());///\\\\\\\new MainForm()
 
         }
-            
+
     }
 }

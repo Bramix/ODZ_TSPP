@@ -100,3 +100,5 @@ C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.CoreCompi
 C:\Users\User\source\repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.csproj.CopyComplete
 C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.exe
 C:\Users\User\Source\Repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.pdb
+C:\Users\User\source\repos\ODZ_TSPP\ODZ_TSPP\bin\Debug\SplashScreen.dll
+C:\Users\User\source\repos\ODZ_TSPP\ODZ_TSPP\obj\Debug\ODZ_TSPP.Forms.frmSplashScreen.resources

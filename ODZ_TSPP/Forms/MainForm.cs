@@ -1,9 +1,11 @@
 ﻿﻿using System;
  using System.Collections.Generic;
  using System.Linq;
- using System.Windows.Forms;
+using System.Threading;
+using System.Windows.Forms;
  using ODZ_TSPP.Entity;
- using ODZ_TSPP.Service.Implementation.DAO;
+using ODZ_TSPP.Forms;
+using ODZ_TSPP.Service.Implementation.DAO;
  using ODZ_TSPP.Service.Interface;
  using ODZ_TSPP.Service.Interface.FilerWorker;
 
@@ -12,12 +14,16 @@
      public partial class MainForm : Form
      {
          private IUserRepository _userRepository = new UserRepository();
+
          public MainForm()
          {
-             InitializeComponent();
+ 
+            InitializeComponent();
          }
 
-         public MainForm(List <User> users)
+        
+
+        public MainForm(List <User> users)
          {
              InitializeComponent();
          }
@@ -117,12 +123,19 @@
 
         private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-
+    
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Application.Exit();
+            Form ifrm = Application.OpenForms[0];
+            ifrm.Close();
         }
     }
  }
