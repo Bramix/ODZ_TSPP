@@ -52,8 +52,10 @@ namespace ODZ_TSPP
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.searchBox = new System.Windows.Forms.PictureBox();
             this.addBox = new System.Windows.Forms.PictureBox();
             this.settingBox = new System.Windows.Forms.PictureBox();
@@ -66,6 +68,7 @@ namespace ODZ_TSPP
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingBox)).BeginInit();
@@ -90,7 +93,7 @@ namespace ODZ_TSPP
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(1);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1155, 650);
+            this.pnlHeader.Size = new System.Drawing.Size(1155, 714);
             this.pnlHeader.TabIndex = 0;
             // 
             // panel4
@@ -131,6 +134,8 @@ namespace ODZ_TSPP
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(160)))), ((int)(((byte)(190)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -144,7 +149,7 @@ namespace ODZ_TSPP
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(18, 16, 18, 16);
-            this.panel2.Size = new System.Drawing.Size(104, 501);
+            this.panel2.Size = new System.Drawing.Size(104, 565);
             this.panel2.TabIndex = 2;
             // 
             // label6
@@ -204,7 +209,7 @@ namespace ODZ_TSPP
             this.panel1.Location = new System.Drawing.Point(109, 77);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(18, 16, 18, 16);
-            this.panel1.Size = new System.Drawing.Size(1043, 471);
+            this.panel1.Size = new System.Drawing.Size(1043, 535);
             this.panel1.TabIndex = 1;
             // 
             // table
@@ -257,7 +262,7 @@ namespace ODZ_TSPP
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.table.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.table.RowHeadersVisible = false;
-            this.table.Size = new System.Drawing.Size(787, 409);
+            this.table.Size = new System.Drawing.Size(787, 473);
             this.table.TabIndex = 0;
             this.table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellClick);
             // 
@@ -338,6 +343,18 @@ namespace ODZ_TSPP
             this.label1.TabIndex = 0;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(3, 466);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(77, 15);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Menu";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label7.Click += new System.EventHandler(this.ClickMenu);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ODZ_TSPP.Properties.Resources.findIcon;
@@ -359,6 +376,20 @@ namespace ODZ_TSPP
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::ODZ_TSPP.Properties.Resources.menuIcon1;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 413);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(57, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.ClickMenu);
             // 
             // searchBox
             // 
@@ -432,7 +463,7 @@ namespace ODZ_TSPP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(913, 487);
+            this.ClientSize = new System.Drawing.Size(913, 551);
             this.Controls.Add(this.pnlHeader);
             this.Location = new System.Drawing.Point(22, 22);
             this.Name = "MainForm";
@@ -448,6 +479,7 @@ namespace ODZ_TSPP
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingBox)).EndInit();
@@ -487,6 +519,9 @@ namespace ODZ_TSPP
         private System.Windows.Forms.PictureBox wordBox;
 
         #endregion
+
+        private Label label7;
+        private PictureBox pictureBox2;
     }
 }
 

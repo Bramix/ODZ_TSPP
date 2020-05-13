@@ -125,6 +125,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
@@ -214,6 +223,9 @@
     <Content Include="Resources\globalSearch.png" />
     <Content Include="Resources\image.jpg" />
     <None Include="Resources\image1.jpg" />
+    <None Include="Resources\menuIcon3.png" />
+    <None Include="Resources\menuIcon2.png" />
+    <None Include="Resources\menuIcon1.png" />
     <Content Include="Resources\phone.png" />
     <Content Include="Resources\phone_symbol.png" />
     <Content Include="Resources\setting.png" />

@@ -153,6 +153,36 @@ namespace ODZ_TSPP.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menuIcon1 {
+            get {
+                object obj = ResourceManager.GetObject("menuIcon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menuIcon2 {
+            get {
+                object obj = ResourceManager.GetObject("menuIcon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menuIcon3 {
+            get {
+                object obj = ResourceManager.GetObject("menuIcon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phone {
             get {
                 object obj = ResourceManager.GetObject("phone", resourceCulture);

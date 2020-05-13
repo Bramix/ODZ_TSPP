@@ -121,6 +121,12 @@ using ODZ_TSPP.Service.Implementation.DAO;
              new DbConfigurationForm().Show();
          }
 
+
+        private void ClickMenu(object sender, EventArgs e)
+        {
+            new Forms.Menu( _userRepository, txtSearch, table).ShowDialog();//
+        }
+
         private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
     
