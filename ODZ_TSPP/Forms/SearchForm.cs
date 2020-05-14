@@ -26,12 +26,19 @@ namespace ODZ_TSPP
             var typeOfOperaton = this.typeOfOperation.Text;
             var field = this.Fields.Text;
             var value = this.value.Text;
-            var andOr = AndOr.Text;
+            var andOr = AndOr.Text.ToLower();
             var resultText = textBox.Text;
 
             if ((field == Namings.YearOfConnection.ToString() || field == Namings.NumberOfFlat.ToString()) && !value.All(char.IsDigit) )
             {
                 MessageBox.Show("field should have integer value for this case");
+                return;
+            }
+
+            if (field.Equals("Searching field") || typeOfOperaton.Equals("Searching operation") ||
+                value.Equals("Searching value"))
+            {
+                MessageBox.Show("Searching field/operation and value should be filled");
                 return;
             }
             
@@ -43,7 +50,7 @@ namespace ODZ_TSPP
                     .Append(" ")
                     .Append(typeOfOperaton)
                     .Append(" ")
-                    .Append(value)
+                    .Append("'" + value + "'")
                     .ToString();
             }
             else
@@ -56,7 +63,7 @@ namespace ODZ_TSPP
                     .Append(" ")
                     .Append(andOr)
                     .Append(" ")
-                    .Append(field)
+                    .Append("'" + field + "'")
                     .Append(" ")
                     .Append(typeOfOperaton)
                     .Append(" ")

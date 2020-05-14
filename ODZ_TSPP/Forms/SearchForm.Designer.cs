@@ -55,6 +55,7 @@ namespace ODZ_TSPP
             // 
             // Fields
             // 
+            this.Fields.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Fields.FormattingEnabled = true;
             this.Fields.Items.AddRange(new object[] {"SecondName", "YearOfConnection", "PhoneNumber", "City", "Supruna", "NumberOfHouse", "NumberOfFlat"});
             this.Fields.Location = new System.Drawing.Point(40, 29);
@@ -62,7 +63,6 @@ namespace ODZ_TSPP
             this.Fields.Name = "Fields";
             this.Fields.Size = new System.Drawing.Size(265, 28);
             this.Fields.TabIndex = 0;
-            this.Fields.Text = "Searching field";
             // 
             // value
             // 
@@ -188,17 +188,18 @@ namespace ODZ_TSPP
             // 
             // typeOfOperation
             // 
+            this.typeOfOperation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeOfOperation.FormattingEnabled = true;
             this.typeOfOperation.Items.AddRange(new object[] {"=", "!=", "LIKE", "<", ">", "<=", ">="});
             this.typeOfOperation.Location = new System.Drawing.Point(40, 62);
             this.typeOfOperation.Name = "typeOfOperation";
             this.typeOfOperation.Size = new System.Drawing.Size(265, 28);
             this.typeOfOperation.TabIndex = 28;
-            this.typeOfOperation.Text = "Searching operation";
             // 
             // AndOr
             // 
             this.AndOr.AutoCompleteCustomSource.AddRange(new string[] {"AND", "OR"});
+            this.AndOr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AndOr.FormattingEnabled = true;
             this.AndOr.Items.AddRange(new object[] {"Or", "And"});
             this.AndOr.Location = new System.Drawing.Point(40, 128);
