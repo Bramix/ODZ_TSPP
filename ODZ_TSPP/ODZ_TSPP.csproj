@@ -151,6 +151,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Service\Implementation\DAO\UserRepository.cs" />
     <Compile Include="Service\Implementation\DataReaderParser.cs" />
     <Compile Include="Service\Implementation\FilerWorker\ExcelFileWorker.cs" />
@@ -181,14 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -223,9 +223,12 @@
     <Content Include="Resources\globalSearch.png" />
     <Content Include="Resources\image.jpg" />
     <None Include="Resources\image1.jpg" />
+    <None Include="Resources\menuIcon4.png" />
     <None Include="Resources\menuIcon3.png" />
     <None Include="Resources\menuIcon2.png" />
     <None Include="Resources\menuIcon1.png" />
+    <None Include="Resources\menuIcon5.png" />
+    <None Include="Resources\menuIcon6.png" />
     <Content Include="Resources\phone.png" />
     <Content Include="Resources\phone_symbol.png" />
     <Content Include="Resources\setting.png" />

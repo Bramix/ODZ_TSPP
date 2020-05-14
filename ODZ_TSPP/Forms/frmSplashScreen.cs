@@ -34,7 +34,7 @@ namespace ODZ_TSPP.Forms
 
         private void frmSplashScreen_Load_1(object sender, EventArgs e)
         {
-            timeLeft = 20;
+            timeLeft = 500;
             timer1.Start();
         }
 
@@ -45,7 +45,23 @@ namespace ODZ_TSPP.Forms
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
+            new MainForm().Show();
+            this.Hide();
+        }
 
+        private void frmSplashScreen_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            new MainForm().Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            new MainForm().Show();
+            this.Hide();
         }
     }
 }

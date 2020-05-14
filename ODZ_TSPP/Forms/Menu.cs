@@ -100,5 +100,20 @@ namespace ODZ_TSPP.Forms
         {
             new DbConfigurationForm().Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClickCancel(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
