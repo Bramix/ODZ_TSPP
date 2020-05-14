@@ -224,11 +224,6 @@
     <Content Include="Resources\image.jpg" />
     <None Include="Resources\image1.jpg" />
     <None Include="Resources\menuIcon4.png" />
-    <None Include="Resources\menuIcon3.png" />
-    <None Include="Resources\menuIcon2.png" />
-    <None Include="Resources\menuIcon1.png" />
-    <None Include="Resources\menuIcon5.png" />
-    <None Include="Resources\menuIcon6.png" />
     <Content Include="Resources\phone.png" />
     <Content Include="Resources\phone_symbol.png" />
     <Content Include="Resources\setting.png" />

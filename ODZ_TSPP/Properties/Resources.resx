@@ -121,12 +121,6 @@
   <data name="findIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\findIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menuIcon31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,29 +139,8 @@
   <data name="wordIxon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wordIxon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menuIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="globalSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\globalSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon61" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,11 +165,5 @@
   </data>
   <data name="phone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon51" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuIcon62" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuIcon6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
