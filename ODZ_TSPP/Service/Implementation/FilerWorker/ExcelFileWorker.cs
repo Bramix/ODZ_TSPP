@@ -57,7 +57,7 @@ namespace ODZ_TSPP.Service.Interface.FilerWorker
             xlsWorkbook.Metadata.Author = "KLB";
             WorkSheet xlsSheet = xlsWorkbook.CreateWorkSheet("new_sheet");
             
-            var users = _userRepository.GetAllUsers();
+            var users = CurrentUserRepository.GetAllCurrentUsers();
 
             xlsSheet["A1"].Value = "Last Name";
             xlsSheet["B1"].Value = "Year of Connection";

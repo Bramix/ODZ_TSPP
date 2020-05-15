@@ -43,10 +43,10 @@ namespace ODZ_TSPP.Service.Interface.FilerWorker
             if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
                 return;
 
-            string content = _userRepository.GetAllUsers()
+            string content = CurrentUserRepository.GetAllCurrentUsers()
                 .Select(item => item.ToString())
                 .Aggregate((first, second) => first + "\n\n" + second);
-            
+
             string filename = saveFileDialog.FileName;
             File.WriteAllText(filename, content);
             MessageBox.Show("The file has been saved");

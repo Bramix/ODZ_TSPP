@@ -54,6 +54,7 @@ using ODZ_TSPP.Service.Implementation.DAO;
 
          void PopulateData(IEnumerable<User> users)
          {
+             CurrentUserRepository.SetAllCurrentUsers(users.ToList());
              table.Rows.Clear();
              foreach (User user in users)
              {

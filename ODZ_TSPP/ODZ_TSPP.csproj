@@ -156,6 +156,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Service\Implementation\DAO\CurrentUserRepository.cs" />
     <Compile Include="Service\Implementation\DAO\UserRepository.cs" />
     <Compile Include="Service\Implementation\DataReaderParser.cs" />
     <Compile Include="Service\Implementation\FilerWorker\ExcelFileWorker.cs" />
