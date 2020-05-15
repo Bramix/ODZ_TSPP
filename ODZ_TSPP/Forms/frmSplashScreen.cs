@@ -34,7 +34,7 @@ namespace ODZ_TSPP.Forms
 
         private void frmSplashScreen_Load_1(object sender, EventArgs e)
         {
-            timeLeft = 500;
+            timeLeft = 50;
             timer1.Start();
         }
 

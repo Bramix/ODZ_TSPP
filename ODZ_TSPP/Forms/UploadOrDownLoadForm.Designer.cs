@@ -33,17 +33,18 @@ namespace ODZ_TSPP
         {
             this.uploadBox = new System.Windows.Forms.PictureBox();
             this.downLoadBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize) (this.uploadBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.downLoadBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uploadBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downLoadBox)).BeginInit();
             this.SuspendLayout();
             // 
             // uploadBox
             // 
             this.uploadBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uploadBox.Image = global::ODZ_TSPP.Properties.Resources.Download;
-            this.uploadBox.Location = new System.Drawing.Point(182, 6);
+            this.uploadBox.Location = new System.Drawing.Point(115, 4);
+            this.uploadBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uploadBox.Name = "uploadBox";
-            this.uploadBox.Size = new System.Drawing.Size(110, 93);
+            this.uploadBox.Size = new System.Drawing.Size(73, 60);
             this.uploadBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.uploadBox.TabIndex = 0;
             this.uploadBox.TabStop = false;
@@ -53,9 +54,10 @@ namespace ODZ_TSPP
             // 
             this.downLoadBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.downLoadBox.Image = global::ODZ_TSPP.Properties.Resources.upload;
-            this.downLoadBox.Location = new System.Drawing.Point(37, 6);
+            this.downLoadBox.Location = new System.Drawing.Point(11, 4);
+            this.downLoadBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.downLoadBox.Name = "downLoadBox";
-            this.downLoadBox.Size = new System.Drawing.Size(101, 93);
+            this.downLoadBox.Size = new System.Drawing.Size(67, 60);
             this.downLoadBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.downLoadBox.TabIndex = 1;
             this.downLoadBox.TabStop = false;
@@ -63,23 +65,25 @@ namespace ODZ_TSPP
             // 
             // UploadOrDownLoadForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(328, 101);
+            this.ClientSize = new System.Drawing.Size(200, 66);
             this.ControlBox = false;
             this.Controls.Add(this.downLoadBox);
             this.Controls.Add(this.uploadBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UploadOrDownLoadForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            ((System.ComponentModel.ISupportInitialize) (this.uploadBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.downLoadBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uploadBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downLoadBox)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.PictureBox downLoadBox;

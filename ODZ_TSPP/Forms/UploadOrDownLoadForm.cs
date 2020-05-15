@@ -6,6 +6,8 @@ using ODZ_TSPP.Entity;
 using ODZ_TSPP.Service.Implementation;
 using ODZ_TSPP.Service.Implementation.DAO;
 using ODZ_TSPP.Service.Interface;
+using ODZ_TSPP.Service.Interface.FilerWorker;
+using ODZ_TSPP.Forms;
 
 namespace ODZ_TSPP
 {
@@ -23,8 +25,16 @@ namespace ODZ_TSPP
 
         private void download_Click(object sender, EventArgs e)
         {
-            _fileWorker.WriteUsersToFile();
-            this.Close();
+            if (_fileWorker is WordFileWorker)
+            {
+                new WordFilterDownloadForm(new WordFileWorker()).ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                _fileWorker.WriteUsersToFile();
+                this.Close();
+            }
         }
 
         private void upload_Click(object sender, EventArgs e)

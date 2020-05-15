@@ -36,6 +36,7 @@ namespace ODZ_TSPP.Service.Interface.FilerWorker
             return users;
         }
 
+        //
         public void WriteUsersToFile()
         {
             var saveFileDialog = new SaveFileDialog();
@@ -45,6 +46,22 @@ namespace ODZ_TSPP.Service.Interface.FilerWorker
 
             string content = CurrentUserRepository.GetAllCurrentUsers()
                 .Select(item => item.ToString())
+                .Aggregate((first, second) => first + "\n\n" + second);
+
+            string filename = saveFileDialog.FileName;
+            File.WriteAllText(filename, content);
+            MessageBox.Show("The file has been saved");
+        }
+
+        public void WriteUsersToFile(bool secondNameB, bool yearOfConnectionB, bool phoneNumberB, bool addressB, bool idB)
+        {
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Word files (*.doc;*.docx;)|*.doc;*.docx)";
+            if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            string content = CurrentUserRepository.GetAllCurrentUsers()
+                .Select(item => item.ToString(secondNameB, yearOfConnectionB, phoneNumberB, addressB, idB))
                 .Aggregate((first, second) => first + "\n\n" + second);
 
             string filename = saveFileDialog.FileName;

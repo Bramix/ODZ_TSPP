@@ -71,6 +71,21 @@ namespace ODZ_TSPP.Entity
         {
             return $"{nameof(secondName)}: {secondName}, {nameof(yearOfConnection)}: {yearOfConnection}, {nameof(phoneNumber)}: {phoneNumber}, {address}";
         }
-        
+
+        public string ToString(bool secondNameB, bool yearOfConnectionB,bool phoneNumberB, bool addressB, bool idB)
+        {
+            string line = string.Empty;
+            if (secondNameB) line += $"{nameof(secondName)}: {secondName}, ";
+
+            if (yearOfConnectionB) line += $"{nameof(yearOfConnection)}: {yearOfConnection}, ";
+
+            if (phoneNumberB) line += $"{nameof(phoneNumber)}: {phoneNumber}, ";
+
+            if (addressB) line += $"{nameof(address)}: {address}, ";
+
+            if (idB) line += $"{nameof(id)}: {id}";
+
+            return line;
+        }
     }
 }

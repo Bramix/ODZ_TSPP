@@ -33,6 +33,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.customInstaller1 = new MySql.Data.MySqlClient.CustomInstaller();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,10 +43,10 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(44, 357);
+            this.progressBar1.Location = new System.Drawing.Point(44, 373);
             this.progressBar1.MarqueeAnimationSpeed = 50;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(713, 48);
+            this.progressBar1.Size = new System.Drawing.Size(713, 32);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 0;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
@@ -57,16 +58,17 @@
             this.textBox1.Location = new System.Drawing.Point(392, 31);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(365, 320);
+            this.textBox1.Size = new System.Drawing.Size(365, 336);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "dgnhgfvcbvnbnm";
+            this.textBox1.Text = "There will be information about our team and our project.\r\nІf you want to skip th" +
+    "at screen saver just click on it.\r\n\r\n";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ODZ_TSPP.Properties.Resources.image;
             this.pictureBox1.Location = new System.Drawing.Point(44, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 320);
+            this.pictureBox1.Size = new System.Drawing.Size(342, 336);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -99,5 +101,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private MySql.Data.MySqlClient.CustomInstaller customInstaller1;
     }
 }
